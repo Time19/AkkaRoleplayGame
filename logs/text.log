@@ -1,0 +1,139 @@
+15:47:46.026 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger -- Slf4jLogger started
+15:47:48.073 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.remote.artery.ArteryTransport -- Remoting started with transport [Artery tcp]; listening on address [akka://ClusterSystem@localhost:25511] with UID [5298905069138490976]
+15:47:48.147 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Starting up, Akka version [2.9.5] ...
+15:47:49.292 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Registered cluster JMX MBean [akka:type=Cluster]
+15:47:49.292 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Started up successfully
+15:47:49.360 [ClusterSystem-akka.actor.default-dispatcher-14] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR started. Config: strategy [KeepMajority], stable-after [20 seconds], down-all-when-unstable [15 seconds], selfUniqueAddress [akka://ClusterSystem@localhost:25511#5298905069138490976], selfDc [default].
+15:47:49.377 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Node [akka://ClusterSystem@localhost:25511] is JOINING itself (with roles [dc-default], version [0.0.0]) and forming new cluster
+15:47:49.381 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - is the new leader among reachable nodes (more leaders may exist)
+15:47:49.402 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Leader is moving node [akka://ClusterSystem@localhost:25511] to [Up]
+15:47:49.440 [ClusterSystem-akka.actor.default-dispatcher-14] INFO  akka.cluster.sbr.SplitBrainResolver -- This node is now the leader responsible for taking SBR decisions among the reachable nodes (more leaders may exist).
+15:47:58.354 [ClusterSystem-akka.actor.default-dispatcher-23] WARN  akka.cluster.ClusterHeartbeat -- Cluster Node [akka://ClusterSystem@localhost:25511] - Scheduled sending of heartbeat was delayed. Previous heartbeat was sent [4016] ms ago, expected interval is [1000] ms. This may cause failure detection to mark members as unreachable. The reason can be thread starvation, CPU overload, or GC.
+15:47:58.398 [ClusterSystem-akka.actor.default-dispatcher-14] INFO  c.b.akka.botrace.board.cli.BoardMain -- BoardRoot with BoardModel created
+15:47:58.400 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.a.botrace.board.actor.BoardRoot -- BoardRoot created: Actor[akka://ClusterSystem/user/BoardRoot#-2040844974]
+15:47:58.401 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.a.botrace.board.actor.BoardRoot -- BoardRoot: Registered at the receptionist
+15:47:58.404 [ClusterSystem-akka.actor.default-dispatcher-23] INFO  c.b.a.b.board.actor.ClusterListener -- ClusterListener: Created
+15:47:58.411 [ClusterSystem-akka.actor.default-dispatcher-23] INFO  c.b.a.b.board.actor.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:25511, Up)
+15:47:59.361 [ClusterSystem-akka.actor.default-dispatcher-23] WARN  akka.cluster.ClusterHeartbeat -- Cluster Node [akka://ClusterSystem@localhost:25511] - Scheduled sending of heartbeat was delayed. Previous heartbeat was sent [3945] ms ago, expected interval is [1000] ms. This may cause failure detection to mark members as unreachable. The reason can be thread starvation, CPU overload, or GC.
+15:48:11.312 [ClusterSystem-akka.actor.default-dispatcher-4] WARN  akka.cluster.ClusterHeartbeat -- Cluster Node [akka://ClusterSystem@localhost:25511] - Scheduled sending of heartbeat was delayed. Previous heartbeat was sent [3823] ms ago, expected interval is [1000] ms. This may cause failure detection to mark members as unreachable. The reason can be thread starvation, CPU overload, or GC.
+15:48:31.855 [ClusterSystem-akka.actor.default-dispatcher-24] INFO  c.b.a.botrace.board.actor.BoardRoot -- Starting fight
+15:48:31.860 [ClusterSystem-akka.actor.default-dispatcher-14] ERROR c.b.akka.botrace.board.cli.BoardMain -- null
+java.util.NoSuchElementException: null
+	at java.base/java.util.ArrayList.getFirst(ArrayList.java:440)
+	at ch.bfh.akka.actorrace.board/ch.bfh.akka.botrace.board.actor.BoardRoot.onStartRaceMessage(BoardRoot.java:172)
+	at ch.bfh.akka.actorrace.board/ch.bfh.akka.botrace.board.actor.BoardRoot.onMessage(BoardRoot.java:110)
+	at ch.bfh.akka.actorrace.board/ch.bfh.akka.botrace.board.actor.BoardRoot.onMessage(BoardRoot.java:31)
+	at akka.actor.typed@2.9.5/akka.actor.typed.javadsl.AbstractOnMessageBehavior.receive(AbstractOnMessageBehavior.scala:65)
+	at akka.actor.typed@2.9.5/akka.actor.typed.Behavior$.interpret(Behavior.scala:282)
+	at akka.actor.typed@2.9.5/akka.actor.typed.Behavior$.interpretMessage(Behavior.scala:238)
+	at akka.actor.typed@2.9.5/akka.actor.typed.internal.adapter.ActorAdapter.handleMessage(ActorAdapter.scala:130)
+	at akka.actor.typed@2.9.5/akka.actor.typed.internal.adapter.ActorAdapter.aroundReceive(ActorAdapter.scala:109)
+	at akka.actor@2.9.5/akka.actor.ActorCell.receiveMessage$$$capture(ActorCell.scala:577)
+	at akka.actor@2.9.5/akka.actor.ActorCell.receiveMessage(ActorCell.scala)
+	at akka.actor@2.9.5/akka.actor.ActorCell.invoke(ActorCell.scala:545)
+	at akka.actor@2.9.5/akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270)
+	at akka.actor@2.9.5/akka.dispatch.Mailbox.run(Mailbox.scala:231)
+	at akka.actor@2.9.5/akka.dispatch.Mailbox.exec(Mailbox.scala:243)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:507)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1458)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2034)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:189)
+15:48:31.889 [ClusterSystem-akka.actor.default-dispatcher-14] INFO  akka.actor.CoordinatedShutdown -- Running CoordinatedShutdown with reason [JvmExitReason]
+15:48:31.893 [ClusterSystem-akka.actor.default-dispatcher-14] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Marked address [akka://ClusterSystem@localhost:25511] as [Leaving]
+15:48:32.860 [ClusterSystem-akka.actor.default-dispatcher-24] WARN  akka.cluster.ClusterHeartbeat -- Cluster Node [akka://ClusterSystem@localhost:25511] - Scheduled sending of heartbeat was delayed. Previous heartbeat was sent [21548] ms ago, expected interval is [1000] ms. This may cause failure detection to mark members as unreachable. The reason can be thread starvation, CPU overload, or GC.
+15:48:32.861 [ClusterSystem-akka.actor.default-dispatcher-24] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Leader is moving node [akka://ClusterSystem@localhost:25511] to [Exiting]
+15:48:32.863 [ClusterSystem-akka.actor.default-dispatcher-24] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Exiting completed
+15:48:32.863 [ClusterSystem-akka.actor.default-dispatcher-24] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Shutting down...
+15:48:32.864 [ClusterSystem-akka.actor.default-dispatcher-24] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Successfully shut down
+15:48:32.867 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.a.b.board.actor.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:25511, Removed) after Exiting
+15:48:32.877 [ClusterSystem-akka.actor.default-dispatcher-24] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Shutting down remote daemon.
+15:48:32.877 [ClusterSystem-akka.actor.default-dispatcher-24] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remote daemon shut down; proceeding with flushing remote transports.
+15:48:32.893 [ClusterSystem-akka.actor.default-dispatcher-24] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remoting shut down.
+16:00:17.559 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger -- Slf4jLogger started
+16:00:18.061 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.remote.artery.ArteryTransport -- Remoting started with transport [Artery tcp]; listening on address [akka://ClusterSystem@localhost:25511] with UID [-7319622404968878352]
+16:00:18.081 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Starting up, Akka version [2.9.5] ...
+16:00:18.236 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Registered cluster JMX MBean [akka:type=Cluster]
+16:00:18.236 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Started up successfully
+16:00:18.288 [ClusterSystem-akka.actor.default-dispatcher-15] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR started. Config: strategy [KeepMajority], stable-after [20 seconds], down-all-when-unstable [15 seconds], selfUniqueAddress [akka://ClusterSystem@localhost:25511#-7319622404968878352], selfDc [default].
+16:00:18.306 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Node [akka://ClusterSystem@localhost:25511] is JOINING itself (with roles [dc-default], version [0.0.0]) and forming new cluster
+16:00:18.307 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - is the new leader among reachable nodes (more leaders may exist)
+16:00:18.319 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Leader is moving node [akka://ClusterSystem@localhost:25511] to [Up]
+16:00:18.365 [ClusterSystem-akka.actor.default-dispatcher-15] INFO  akka.cluster.sbr.SplitBrainResolver -- This node is now the leader responsible for taking SBR decisions among the reachable nodes (more leaders may exist).
+16:00:18.712 [ClusterSystem-akka.actor.default-dispatcher-15] INFO  c.b.a.b.board.actor.ClusterListener -- ClusterListener: Created
+16:00:18.716 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.b.board.actor.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:25511, Up)
+16:00:18.899 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.board.cli.BoardMain -- BoardRoot with BoardModel created
+16:00:18.901 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- BoardRoot created: Actor[akka://ClusterSystem/user/BoardRoot#-88883840]
+16:00:18.903 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- BoardRoot: Registered at the receptionist
+16:00:19.855 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Received InitJoin message from [Actor[akka://ClusterSystem@localhost:61935/system/cluster/core/daemon/joinSeedNodeProcess-1#31886983]] to [akka://ClusterSystem@localhost:25511]
+16:00:19.855 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Sending InitJoinAck message from node [akka://ClusterSystem@localhost:25511] to [Actor[akka://ClusterSystem@localhost:61935/system/cluster/core/daemon/joinSeedNodeProcess-1#31886983]] (version [2.9.5])
+16:00:19.949 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Node [akka://ClusterSystem@localhost:61935] is JOINING, roles [dc-default], version [0.0.0]
+16:00:20.283 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Leader is moving node [akka://ClusterSystem@localhost:61935] to [Up]
+16:00:20.284 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.a.b.board.actor.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:61935, Up)
+16:00:20.843 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- Registering: Gil
+16:00:20.906 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- Ping response received from Gil
+16:01:03.553 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- Starting fight
+16:02:27.413 [ClusterSystem-akka.actor.default-dispatcher-4] WARN  akka.cluster.ClusterHeartbeat -- Cluster Node [akka://ClusterSystem@localhost:25511] - Scheduled sending of heartbeat was delayed. Previous heartbeat was sent [40093] ms ago, expected interval is [1000] ms. This may cause failure detection to mark members as unreachable. The reason can be thread starvation, CPU overload, or GC.
+16:02:27.414 [ClusterSystem-akka.actor.default-dispatcher-4] WARN  akka.cluster.ClusterHeartbeat -- Cluster Node [akka://ClusterSystem@localhost:25511] - Scheduled sending of heartbeat was delayed. Previous heartbeat was sent [83964] ms ago, expected interval is [1000] ms. This may cause failure detection to mark members as unreachable. The reason can be thread starvation, CPU overload, or GC.
+16:02:28.568 [ClusterSystem-akka.actor.default-dispatcher-15] WARN  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Marking node as UNREACHABLE [Member(akka://ClusterSystem@localhost:61935, Up)].
+16:02:31.963 [ClusterSystem-akka.actor.default-dispatcher-30] WARN  akka.cluster.ClusterHeartbeat -- Cluster Node [akka://ClusterSystem@localhost:25511] - Scheduled sending of heartbeat was delayed. Previous heartbeat was sent [3395] ms ago, expected interval is [1000] ms. This may cause failure detection to mark members as unreachable. The reason can be thread starvation, CPU overload, or GC.
+16:02:31.964 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.965 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.967 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.967 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.b.board.actor.ClusterListener -- Member detected as unreachable: Member(akka://ClusterSystem@localhost:61935, Up)
+16:02:31.967 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.968 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.968 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.968 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.968 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.969 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.969 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.969 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.969 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.969 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.969 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.969 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.969 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.969 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.970 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.971 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.972 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.972 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.972 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.972 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.972 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.972 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.972 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.972 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:31.972 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:31.973 [ClusterSystem-akka.actor.default-dispatcher-30] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR found unreachable members, waiting for stable-after = 20000 ms before taking downing decision. Now 1 unreachable members found. Downing decision will not be made before 2025-03-02T15:02:51.973288Z.
+16:02:31.994 [ClusterSystem-akka.actor.default-dispatcher-15] INFO  akka.actor.CoordinatedShutdown -- Running CoordinatedShutdown with reason [JvmExitReason]
+16:02:32.003 [ClusterSystem-akka.actor.default-dispatcher-15] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:25511] - Marked address [akka://ClusterSystem@localhost:25511] as [Leaving]
+16:02:33.914 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.a.botrace.board.actor.BoardRoot -- Sending ping to Gil
+16:02:33.914 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.a.botrace.board.actor.BoardRoot -- Setting timeout for Gil
+16:02:36.931 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.a.botrace.board.actor.BoardRoot -- Timeout reached for Gil
+16:02:36.931 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.a.botrace.board.actor.BoardRoot -- Deregistering bot Gil

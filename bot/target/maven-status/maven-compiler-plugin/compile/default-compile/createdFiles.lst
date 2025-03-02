@@ -1,0 +1,13 @@
+ch\bfh\akka\botrace\bot\ClusterListener.class
+ch\bfh\akka\botrace\bot\BotMain.class
+ch\bfh\akka\botrace\bot\BotRoot$ListingResponse.class
+ch\bfh\akka\botrace\bot\ClusterListener$ReachabilityChange.class
+ch\bfh\akka\botrace\bot\BotRoot$Phase.class
+ch\bfh\akka\botrace\bot\BotRoot.class
+ch\bfh\akka\botrace\bot\BotRoot$TimerMessagePlay.class
+ch\bfh\akka\botrace\bot\BotRoot$TimerMessageRegistering.class
+module-info.class
+ch\bfh\akka\botrace\bot\package-info.class
+ch\bfh\akka\botrace\bot\ClusterListener$Event.class
+ch\bfh\akka\botrace\bot\BotRoot$TimerMessageReached.class
+ch\bfh\akka\botrace\bot\ClusterListener$MemberChange.class

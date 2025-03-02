@@ -1,0 +1,443 @@
+11:42:12.533 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger -- Slf4jLogger started
+11:42:12.871 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.remote.artery.ArteryTransport -- Remoting started with transport [Artery tcp]; listening on address [akka://ClusterSystem@localhost:54708] with UID [-3783271983217452374]
+11:42:12.889 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Starting up, Akka version [2.9.5] ...
+11:42:12.997 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Registered cluster JMX MBean [akka:type=Cluster]
+11:42:13.060 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Started up successfully
+11:42:13.067 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR started. Config: strategy [KeepMajority], stable-after [20 seconds], down-all-when-unstable [15 seconds], selfUniqueAddress [akka://ClusterSystem@localhost:54708#-3783271983217452374], selfDc [default].
+11:42:13.554 [ch.bfh.akka.botrace.bot.BotMain.main()] INFO  akka.actor.typed.ActorSystem -- Player Actor System created
+11:42:13.592 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- ClusterListener: Created
+11:42:13.645 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+11:42:13.935 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Received InitJoinAck message from [Actor[akka://ClusterSystem@localhost:25511/system/cluster/core/daemon#-1369950180]] to [akka://ClusterSystem@localhost:54708]
+11:42:13.987 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Welcome from [akka://ClusterSystem@localhost:25511]
+11:42:14.006 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:25511, Up)
+11:42:15.070 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:54708, Up)
+11:42:16.182 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+11:42:16.183 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- StartedRegisteringTimer
+11:42:16.183 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Stored board reference from receptionist
+11:42:16.380 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot java-06 got pinged
+11:42:16.381 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot java-06 responded to the ping
+11:42:16.389 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot java-06 got setup message
+11:42:16.390 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot java-06 switched to Phase: READY
+11:42:19.821 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot java-06 got pinged
+11:42:19.822 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot java-06 responded to the ping
+11:42:21.208 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Timer was stopped
+11:42:24.801 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.sbr.SplitBrainResolver -- This node is now the leader responsible for taking SBR decisions among the reachable nodes (more leaders may exist).
+11:42:24.801 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Exiting confirmed [akka://ClusterSystem@localhost:25511]
+11:42:25.220 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - is the new leader among reachable nodes (more leaders may exist)
+11:42:25.227 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Leader is removing confirmed Exiting node [akka://ClusterSystem@localhost:25511]
+11:42:25.228 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:25511, Removed) after Exiting
+11:42:25.229 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+11:42:25.480 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+11:42:25.838 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  akka.remote.artery.Association -- Association to [akka://ClusterSystem@localhost:25511] having UID [-845268167775009777] has been stopped. Harmless quarantine. All messages to this UID will be delivered to dead letters. Reason: ActorSystem terminated
+12:10:47.421 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.actor.CoordinatedShutdown -- Running CoordinatedShutdown with reason [JvmExitReason]
+12:10:47.426 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Marked address [akka://ClusterSystem@localhost:54708] as [Leaving]
+12:10:48.355 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Leader is moving node [akka://ClusterSystem@localhost:54708] to [Exiting]
+12:10:48.356 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Exiting completed
+12:10:48.357 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Shutting down...
+12:10:48.358 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:54708] - Successfully shut down
+12:10:48.361 [ClusterSystem-akka.actor.default-dispatcher-14] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:54708, Removed) after Exiting
+12:10:48.371 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Shutting down remote daemon.
+12:10:48.372 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remote daemon shut down; proceeding with flushing remote transports.
+12:10:48.383 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remoting shut down.
+13:13:13.741 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger -- Slf4jLogger started
+13:13:14.092 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.remote.artery.ArteryTransport -- Remoting started with transport [Artery tcp]; listening on address [akka://ClusterSystem@localhost:57348] with UID [8852500008207557035]
+13:13:14.109 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:57348] - Starting up, Akka version [2.9.5] ...
+13:13:14.239 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:57348] - Registered cluster JMX MBean [akka:type=Cluster]
+13:13:14.239 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:57348] - Started up successfully
+13:13:14.300 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR started. Config: strategy [KeepMajority], stable-after [20 seconds], down-all-when-unstable [15 seconds], selfUniqueAddress [akka://ClusterSystem@localhost:57348#8852500008207557035], selfDc [default].
+13:13:14.806 [ch.bfh.akka.botrace.bot.BotMain.main()] INFO  akka.actor.typed.ActorSystem -- Player Actor System created
+13:13:14.839 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- ClusterListener: Created
+13:13:14.925 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+13:13:15.225 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:57348] - Received InitJoinAck message from [Actor[akka://ClusterSystem@localhost:25511/system/cluster/core/daemon#592804393]] to [akka://ClusterSystem@localhost:57348]
+13:13:15.288 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:57348] - Welcome from [akka://ClusterSystem@localhost:25511]
+13:13:15.308 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:25511, Up)
+13:13:16.297 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:57348, Up)
+15:43:00.519 [ClusterSystem-akka.actor.default-dispatcher-25] INFO  akka.actor.CoordinatedShutdown -- Running CoordinatedShutdown with reason [JvmExitReason]
+15:43:00.526 [ClusterSystem-akka.actor.default-dispatcher-25] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:57348] - Marked address [akka://ClusterSystem@localhost:57348] as [Leaving]
+15:43:01.429 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:57348] - Exiting completed
+15:43:01.431 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:57348] - Shutting down...
+15:43:01.432 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:57348] - Successfully shut down
+15:43:01.436 [ClusterSystem-akka.actor.default-dispatcher-25] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:25511, Removed) after Up
+15:43:01.436 [ClusterSystem-akka.actor.default-dispatcher-25] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:57348, Removed) after Exiting
+15:43:01.445 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Shutting down remote daemon.
+15:43:01.447 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remote daemon shut down; proceeding with flushing remote transports.
+15:43:01.471 [ClusterSystem-akka.actor.default-dispatcher-5] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+15:43:01.471 [ClusterSystem-akka.actor.default-dispatcher-5] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], control stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+15:43:01.478 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remoting shut down.
+15:44:38.160 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger -- Slf4jLogger started
+15:44:38.553 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.remote.artery.ArteryTransport -- Remoting started with transport [Artery tcp]; listening on address [akka://ClusterSystem@localhost:61531] with UID [7366859307173116634]
+15:44:38.570 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61531] - Starting up, Akka version [2.9.5] ...
+15:44:38.706 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61531] - Registered cluster JMX MBean [akka:type=Cluster]
+15:44:38.707 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61531] - Started up successfully
+15:44:38.772 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR started. Config: strategy [KeepMajority], stable-after [20 seconds], down-all-when-unstable [15 seconds], selfUniqueAddress [akka://ClusterSystem@localhost:61531#7366859307173116634], selfDc [default].
+15:44:39.279 [ch.bfh.akka.botrace.bot.BotMain.main()] INFO  akka.actor.typed.ActorSystem -- Player Actor System created
+15:44:39.321 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- ClusterListener: Created
+15:44:39.695 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61531] - Received InitJoinAck message from [Actor[akka://ClusterSystem@localhost:25511/system/cluster/core/daemon#-34880515]] to [akka://ClusterSystem@localhost:61531]
+15:44:39.753 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61531] - Welcome from [akka://ClusterSystem@localhost:25511]
+15:44:39.774 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:25511, Up)
+15:44:40.779 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:61531, Up)
+15:44:43.329 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+15:44:43.329 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+15:44:43.329 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- StartedRegisteringTimer
+15:44:43.330 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Stored board reference from receptionist
+15:44:43.503 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+15:44:43.504 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+15:44:43.512 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got setup message
+15:44:43.513 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil switched to Phase: READY
+15:44:44.291 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+15:44:44.292 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+15:44:48.340 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Timer was stopped
+15:44:49.299 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+15:44:49.299 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+15:44:54.298 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+15:44:54.299 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+15:44:59.291 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+15:44:59.292 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+15:45:04.292 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+15:45:04.292 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+15:45:09.292 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+15:45:09.293 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+15:45:14.295 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+15:45:14.295 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+15:45:17.374 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.actor.CoordinatedShutdown -- Running CoordinatedShutdown with reason [JvmExitReason]
+15:45:17.383 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61531] - Marked address [akka://ClusterSystem@localhost:61531] as [Leaving]
+15:45:17.956 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61531] - Exiting completed
+15:45:17.957 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61531] - Shutting down...
+15:45:17.959 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61531] - Successfully shut down
+15:45:17.961 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:25511, Removed) after Up
+15:45:17.961 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:61531, Removed) after Exiting
+15:45:17.973 [ClusterSystem-akka.actor.default-dispatcher-25] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Shutting down remote daemon.
+15:45:17.974 [ClusterSystem-akka.actor.default-dispatcher-25] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remote daemon shut down; proceeding with flushing remote transports.
+15:45:18.000 [ClusterSystem-akka.actor.default-dispatcher-25] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+15:45:18.000 [ClusterSystem-akka.actor.default-dispatcher-25] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], control stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+15:45:18.007 [ClusterSystem-akka.actor.default-dispatcher-25] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remoting shut down.
+15:59:35.396 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger -- Slf4jLogger started
+15:59:35.755 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.remote.artery.ArteryTransport -- Remoting started with transport [Artery tcp]; listening on address [akka://ClusterSystem@localhost:61935] with UID [-8030410235651959344]
+15:59:35.771 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Starting up, Akka version [2.9.5] ...
+15:59:35.893 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Registered cluster JMX MBean [akka:type=Cluster]
+15:59:35.893 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Started up successfully
+15:59:35.955 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR started. Config: strategy [KeepMajority], stable-after [20 seconds], down-all-when-unstable [15 seconds], selfUniqueAddress [akka://ClusterSystem@localhost:61935#-8030410235651959344], selfDc [default].
+15:59:36.466 [ch.bfh.akka.botrace.bot.BotMain.main()] INFO  akka.actor.typed.ActorSystem -- Player Actor System created
+15:59:36.498 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- ClusterListener: Created
+15:59:36.583 [ClusterSystem-akka.actor.default-dispatcher-4] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: Tcp command [Connect(localhost/<unresolved>:25511,None,List(),Some(5000 milliseconds),true)] failed because of java.net.ConnectException: Connection refused: getsockopt
+15:59:36.583 [ClusterSystem-akka.actor.default-dispatcher-4] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], control stream] Upstream failed, cause: StreamTcpException: Tcp command [Connect(localhost/<unresolved>:25511,None,List(),Some(5000 milliseconds),true)] failed because of java.net.ConnectException: Connection refused: getsockopt
+15:59:42.748 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+15:59:46.066 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Couldn't join seed nodes after [2] attempts, will try again. seed-nodes=[akka://ClusterSystem@localhost:25511]
+15:59:46.075 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: Tcp command [Connect(localhost/<unresolved>:25511,None,List(),Some(5000 milliseconds),true)] failed because of java.net.ConnectException: Connection refused: getsockopt
+15:59:51.090 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Couldn't join seed nodes after [3] attempts, will try again. seed-nodes=[akka://ClusterSystem@localhost:25511]
+15:59:56.073 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.remote.artery.Association -- Outbound control stream to [akka://ClusterSystem@localhost:25511] failed. Restarting it. akka.remote.artery.OutboundHandshake$HandshakeTimeoutException: Handshake with [akka://ClusterSystem@localhost:25511] did not complete within 20000 ms
+15:59:56.114 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Couldn't join seed nodes after [4] attempts, will try again. seed-nodes=[akka://ClusterSystem@localhost:25511]
+15:59:56.119 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: Tcp command [Connect(localhost/<unresolved>:25511,None,List(),Some(5000 milliseconds),true)] failed because of java.net.ConnectException: Connection refused: getsockopt
+16:00:01.148 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Couldn't join seed nodes after [5] attempts, will try again. seed-nodes=[akka://ClusterSystem@localhost:25511]
+16:00:06.152 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Couldn't join seed nodes after [6] attempts, will try again. seed-nodes=[akka://ClusterSystem@localhost:25511]
+16:00:06.159 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: Tcp command [Connect(localhost/<unresolved>:25511,None,List(),Some(5000 milliseconds),true)] failed because of java.net.ConnectException: Connection refused: getsockopt
+16:00:11.176 [ClusterSystem-akka.actor.default-dispatcher-5] WARN  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Couldn't join seed nodes after [7] attempts, will try again. seed-nodes=[akka://ClusterSystem@localhost:25511]
+16:00:16.188 [ClusterSystem-akka.actor.default-dispatcher-5] WARN  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Couldn't join seed nodes after [8] attempts, will try again. seed-nodes=[akka://ClusterSystem@localhost:25511]
+16:00:16.193 [ClusterSystem-akka.actor.default-dispatcher-5] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: Tcp command [Connect(localhost/<unresolved>:25511,None,List(),Some(5000 milliseconds),true)] failed because of java.net.ConnectException: Connection refused: getsockopt
+16:00:19.922 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Received InitJoinAck message from [Actor[akka://ClusterSystem@localhost:25511/system/cluster/core/daemon#1228810198]] to [akka://ClusterSystem@localhost:61935]
+16:00:20.008 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Welcome from [akka://ClusterSystem@localhost:25511]
+16:00:20.023 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:25511, Up)
+16:00:20.296 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:61935, Up)
+16:00:20.550 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+16:00:20.550 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- StartedRegisteringTimer
+16:00:20.551 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Stored board reference from receptionist
+16:00:20.897 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+16:00:20.897 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+16:00:20.904 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got setup message
+16:00:20.904 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil switched to Phase: READY
+16:00:25.569 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Timer was stopped
+16:00:28.855 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Marking node as UNREACHABLE [Member(akka://ClusterSystem@localhost:25511, Up)].
+16:00:28.856 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - is the new leader among reachable nodes (more leaders may exist)
+16:00:28.856 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  c.b.akka.botrace.bot.ClusterListener -- Member detected as unreachable: Member(akka://ClusterSystem@localhost:25511, Up)
+16:00:28.856 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+16:00:28.858 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  akka.cluster.sbr.SplitBrainResolver -- This node is now the leader responsible for taking SBR decisions among the reachable nodes (more leaders may exist).
+16:00:48.168 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Leader can currently not perform its duties, reachability status: [akka://ClusterSystem@localhost:61935 -> akka://ClusterSystem@localhost:25511: Unreachable [Unreachable] (1)], member status: [akka://ClusterSystem@localhost:25511 Up seen=false, akka://ClusterSystem@localhost:61935 Up seen=true]
+16:00:49.192 [ClusterSystem-akka.actor.default-dispatcher-4] WARN  akka.cluster.sbr.SplitBrainResolver -- SBR took decision DownReachable and is downing [akka://ClusterSystem@localhost:61935] including myself, [1] unreachable of [2] members, all members in DC [Member(akka://ClusterSystem@localhost:25511, Up), Member(akka://ClusterSystem@localhost:61935, Up)], full reachability status: [akka://ClusterSystem@localhost:61935 -> akka://ClusterSystem@localhost:25511: Unreachable [Unreachable] (1)]
+16:00:49.193 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR is downing [UniqueAddress(akka://ClusterSystem@localhost:61935,-8030410235651959344)]
+16:00:49.193 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Marking node [akka://ClusterSystem@localhost:61935] as [Down]
+16:00:49.194 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.sbr.SplitBrainResolver -- This node is not the leader any more and not responsible for taking SBR decisions.
+16:00:50.193 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - is no longer leader
+16:00:50.194 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Node has been marked as DOWN. Shutting down myself
+16:00:50.194 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Shutting down...
+16:00:50.195 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:61935] - Successfully shut down
+16:00:50.198 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:25511, Removed) after Up
+16:00:50.199 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:61935, Removed) after Down
+16:00:50.206 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.actor.CoordinatedShutdown -- Running CoordinatedShutdown with reason [ClusterDowningReason]
+16:00:50.212 [ClusterSystem-akka.actor.default-dispatcher-27] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Shutting down remote daemon.
+16:00:50.213 [ClusterSystem-akka.actor.default-dispatcher-27] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remote daemon shut down; proceeding with flushing remote transports.
+16:00:51.239 [ClusterSystem-akka.actor.default-dispatcher-27] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], control stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+16:08:03.870 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger -- Slf4jLogger started
+16:08:04.199 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.remote.artery.ArteryTransport -- Remoting started with transport [Artery tcp]; listening on address [akka://ClusterSystem@localhost:62184] with UID [-5423788949411543260]
+16:08:04.213 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:62184] - Starting up, Akka version [2.9.5] ...
+16:08:04.316 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:62184] - Registered cluster JMX MBean [akka:type=Cluster]
+16:08:04.316 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:62184] - Started up successfully
+16:08:04.377 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR started. Config: strategy [KeepMajority], stable-after [20 seconds], down-all-when-unstable [15 seconds], selfUniqueAddress [akka://ClusterSystem@localhost:62184#-5423788949411543260], selfDc [default].
+16:08:04.823 [ch.bfh.akka.botrace.bot.BotMain.main()] INFO  akka.actor.typed.ActorSystem -- Player Actor System created
+16:08:04.863 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- ClusterListener: Created
+16:08:04.918 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+16:08:05.193 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:62184] - Received InitJoinAck message from [Actor[akka://ClusterSystem@localhost:25511/system/cluster/core/daemon#-727515326]] to [akka://ClusterSystem@localhost:62184]
+16:08:05.246 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:62184] - Welcome from [akka://ClusterSystem@localhost:25511]
+16:08:05.264 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:25511, Up)
+16:08:05.921 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+16:08:05.922 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- StartedRegisteringTimer
+16:08:05.922 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Stored board reference from receptionist
+16:08:06.086 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+16:08:06.150 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+16:08:06.151 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got setup message
+16:08:06.151 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil switched to Phase: READY
+16:08:06.397 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:62184, Up)
+16:08:33.602 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+16:08:33.602 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+16:08:33.602 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Timer was stopped
+17:00:41.831 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.actor.CoordinatedShutdown -- Running CoordinatedShutdown with reason [JvmExitReason]
+17:00:41.838 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:62184] - Marked address [akka://ClusterSystem@localhost:62184] as [Leaving]
+17:00:42.397 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:62184] - Exiting completed
+17:00:42.399 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:62184] - Shutting down...
+17:00:42.399 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:62184] - Successfully shut down
+17:00:42.403 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:25511, Removed) after Up
+17:00:42.403 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:62184, Removed) after Exiting
+17:00:42.415 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Shutting down remote daemon.
+17:00:42.416 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remote daemon shut down; proceeding with flushing remote transports.
+17:00:42.441 [ClusterSystem-akka.actor.default-dispatcher-5] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:00:42.442 [ClusterSystem-akka.actor.default-dispatcher-5] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], control stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:00:42.448 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remoting shut down.
+17:27:34.832 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger -- Slf4jLogger started
+17:27:35.229 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.remote.artery.ArteryTransport -- Remoting started with transport [Artery tcp]; listening on address [akka://ClusterSystem@localhost:64389] with UID [-2905155377003998272]
+17:27:35.253 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64389] - Starting up, Akka version [2.9.5] ...
+17:27:35.394 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64389] - Registered cluster JMX MBean [akka:type=Cluster]
+17:27:35.395 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64389] - Started up successfully
+17:27:35.461 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR started. Config: strategy [KeepMajority], stable-after [20 seconds], down-all-when-unstable [15 seconds], selfUniqueAddress [akka://ClusterSystem@localhost:64389#-2905155377003998272], selfDc [default].
+17:27:36.003 [ch.bfh.akka.botrace.bot.BotMain.main()] INFO  akka.actor.typed.ActorSystem -- Player Actor System created
+17:27:36.046 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- ClusterListener: Created
+17:27:36.110 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+17:27:36.385 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64389] - Received InitJoinAck message from [Actor[akka://ClusterSystem@localhost:25511/system/cluster/core/daemon#1911705796]] to [akka://ClusterSystem@localhost:64389]
+17:27:36.451 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64389] - Welcome from [akka://ClusterSystem@localhost:25511]
+17:27:36.471 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:25511, Up)
+17:27:37.101 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:64389, Up)
+17:27:38.656 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+17:27:38.657 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- StartedRegisteringTimer
+17:27:38.658 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Stored board reference from receptionist
+17:27:38.828 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:27:38.829 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:27:38.850 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got setup message
+17:27:38.850 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil switched to Phase: READY
+17:27:43.686 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Timer was stopped
+17:27:46.885 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:27:46.885 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:27:47.232 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:27:47.232 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:27:52.242 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:27:52.242 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:27:57.222 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:27:57.223 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:28:02.233 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:28:02.233 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:28:07.237 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:28:07.238 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:28:12.241 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:28:12.242 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:28:17.234 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:28:17.234 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:28:21.529 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger -- Slf4jLogger started
+17:28:21.929 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.remote.artery.ArteryTransport -- Remoting started with transport [Artery tcp]; listening on address [akka://ClusterSystem@localhost:64423] with UID [-3659219430530524624]
+17:28:21.948 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64423] - Starting up, Akka version [2.9.5] ...
+17:28:22.098 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64423] - Registered cluster JMX MBean [akka:type=Cluster]
+17:28:22.099 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64423] - Started up successfully
+17:28:22.154 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR started. Config: strategy [KeepMajority], stable-after [20 seconds], down-all-when-unstable [15 seconds], selfUniqueAddress [akka://ClusterSystem@localhost:64423#-3659219430530524624], selfDc [default].
+17:28:22.244 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:28:22.347 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:28:22.684 [ch.bfh.akka.botrace.bot.BotMain.main()] INFO  akka.actor.typed.ActorSystem -- Player Actor System created
+17:28:22.726 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- ClusterListener: Created
+17:28:22.798 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+17:28:22.920 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64423] - Received InitJoinAck message from [Actor[akka://ClusterSystem@localhost:25511/system/cluster/core/daemon#1911705796]] to [akka://ClusterSystem@localhost:64423]
+17:28:22.959 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64423] - Welcome from [akka://ClusterSystem@localhost:25511]
+17:28:23.002 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:25511, Up)
+17:28:23.009 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:64389, Up)
+17:28:23.168 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.ClusterGossip -- Cluster Node [akka://ClusterSystem@localhost:64389] - Ignoring received gossip from unknown [UniqueAddress(akka://ClusterSystem@localhost:64423,-3659219430530524624)]
+17:28:23.915 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:64423, Up)
+17:28:24.164 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:64423, Up)
+17:28:24.815 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+17:28:24.815 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- StartedRegisteringTimer
+17:28:24.816 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Stored board reference from receptionist
+17:28:24.902 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:28:24.902 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:28:24.911 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got setup message
+17:28:24.911 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans switched to Phase: READY
+17:28:29.821 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Timer was stopped
+17:28:30.784 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:28:30.785 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:28:32.238 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:28:32.239 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:28:37.237 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:28:37.238 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:28:42.237 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:28:42.237 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:28:47.238 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:28:47.238 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:28:49.260 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:28:49.260 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:28:49.260 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:28:49.260 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:28:52.246 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:28:52.246 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:28:57.229 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:28:57.229 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:02.240 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:02.240 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:07.243 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:07.243 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:12.245 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:12.245 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:17.244 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:17.245 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:22.242 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:22.242 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:27.242 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:27.242 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:32.254 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:32.254 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:37.252 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:37.252 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:42.240 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:42.240 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:47.253 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:47.253 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:52.235 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:52.235 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:55.923 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.actor.CoordinatedShutdown -- Running CoordinatedShutdown with reason [JvmExitReason]
+17:29:55.930 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64423] - Marked address [akka://ClusterSystem@localhost:64423] as [Leaving]
+17:29:57.254 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans got pinged
+17:29:57.254 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Hans responded to the ping
+17:29:57.538 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64423] - Exiting completed
+17:29:57.540 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64423] - Shutting down...
+17:29:57.540 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64423] - Successfully shut down
+17:29:57.541 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64389] - Exiting confirmed [akka://ClusterSystem@localhost:64423]
+17:29:57.544 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:25511, Removed) after Up
+17:29:57.545 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:64389, Removed) after Up
+17:29:57.545 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:64423, Removed) after Exiting
+17:29:57.559 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Shutting down remote daemon.
+17:29:57.560 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remote daemon shut down; proceeding with flushing remote transports.
+17:29:57.590 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:64389], message stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:29:57.590 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], control stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:29:57.590 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:29:57.591 [ClusterSystem-akka.actor.default-dispatcher-17] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:64389], control stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:29:57.599 [ClusterSystem-akka.actor.default-dispatcher-17] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remoting shut down.
+17:29:58.567 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:64423, Removed) after Exiting
+17:29:58.590 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.remote.artery.Association -- Association to [akka://ClusterSystem@localhost:64423] having UID [-3659219430530524624] has been stopped. Harmless quarantine. All messages to this UID will be delivered to dead letters. Reason: ActorSystem terminated
+17:30:00.570 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.actor.CoordinatedShutdown -- Running CoordinatedShutdown with reason [JvmExitReason]
+17:30:00.578 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64389] - Marked address [akka://ClusterSystem@localhost:64389] as [Leaving]
+17:30:01.596 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64389] - Exiting completed
+17:30:01.598 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64389] - Shutting down...
+17:30:01.598 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64389] - Successfully shut down
+17:30:01.601 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:25511, Removed) after Up
+17:30:01.601 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:64389, Removed) after Exiting
+17:30:01.612 [ClusterSystem-akka.actor.default-dispatcher-31] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Shutting down remote daemon.
+17:30:01.613 [ClusterSystem-akka.actor.default-dispatcher-31] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remote daemon shut down; proceeding with flushing remote transports.
+17:30:01.618 [ClusterSystem-akka.actor.default-dispatcher-31] WARN  akka.remote.artery.Association -- Outbound message stream to [akka://ClusterSystem@localhost:64423] failed after shutdown. akka.remote.artery.Association$OutboundStreamStopQuarantinedSignal$: 
+17:30:01.618 [ClusterSystem-akka.actor.default-dispatcher-31] WARN  akka.remote.artery.Association -- Outbound control stream to [akka://ClusterSystem@localhost:64423] failed after shutdown. akka.remote.artery.Association$OutboundStreamStopQuarantinedSignal$: 
+17:30:02.639 [ClusterSystem-akka.actor.default-dispatcher-31] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:30:02.639 [ClusterSystem-akka.actor.default-dispatcher-31] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], control stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:30:02.646 [ClusterSystem-akka.actor.default-dispatcher-31] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remoting shut down.
+17:39:43.288 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger -- Slf4jLogger started
+17:39:43.675 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.remote.artery.ArteryTransport -- Remoting started with transport [Artery tcp]; listening on address [akka://ClusterSystem@localhost:64792] with UID [4381152286885868339]
+17:39:43.700 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64792] - Starting up, Akka version [2.9.5] ...
+17:39:43.848 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64792] - Registered cluster JMX MBean [akka:type=Cluster]
+17:39:43.848 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64792] - Started up successfully
+17:39:43.912 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR started. Config: strategy [KeepMajority], stable-after [20 seconds], down-all-when-unstable [15 seconds], selfUniqueAddress [akka://ClusterSystem@localhost:64792#4381152286885868339], selfDc [default].
+17:39:44.426 [ch.bfh.akka.botrace.bot.BotMain.main()] INFO  akka.actor.typed.ActorSystem -- Player Actor System created
+17:39:44.461 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- ClusterListener: Created
+17:39:44.521 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+17:39:44.805 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64792] - Received InitJoinAck message from [Actor[akka://ClusterSystem@localhost:25511/system/cluster/core/daemon#1845425976]] to [akka://ClusterSystem@localhost:64792]
+17:39:44.862 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64792] - Welcome from [akka://ClusterSystem@localhost:25511]
+17:39:44.881 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:25511, Up)
+17:39:45.849 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:64792, Up)
+17:39:46.550 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+17:39:46.551 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- StartedRegisteringTimer
+17:39:46.551 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Stored board reference from receptionist
+17:39:46.712 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:39:46.719 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:39:46.726 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got setup message
+17:39:46.726 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil switched to Phase: READY
+17:39:50.943 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:39:50.943 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:39:51.574 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Timer was stopped
+17:39:55.936 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:39:55.936 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:40:00.934 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:40:00.935 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:40:05.951 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:40:05.951 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:40:10.936 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:40:10.937 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:40:15.942 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:40:15.942 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:40:20.946 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:40:20.947 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:40:25.945 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:40:25.946 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:40:26.749 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.event.slf4j.Slf4jLogger -- Slf4jLogger started
+17:40:27.126 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.remote.artery.ArteryTransport -- Remoting started with transport [Artery tcp]; listening on address [akka://ClusterSystem@localhost:64819] with UID [-2260477792873711184]
+17:40:27.141 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64819] - Starting up, Akka version [2.9.5] ...
+17:40:27.263 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64819] - Registered cluster JMX MBean [akka:type=Cluster]
+17:40:27.263 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64819] - Started up successfully
+17:40:27.331 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.sbr.SplitBrainResolver -- SBR started. Config: strategy [KeepMajority], stable-after [20 seconds], down-all-when-unstable [15 seconds], selfUniqueAddress [akka://ClusterSystem@localhost:64819#-2260477792873711184], selfDc [default].
+17:40:27.837 [ch.bfh.akka.botrace.bot.BotMain.main()] INFO  akka.actor.typed.ActorSystem -- Player Actor System created
+17:40:27.871 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- ClusterListener: Created
+17:40:27.951 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+17:40:28.093 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64819] - Received InitJoinAck message from [Actor[akka://ClusterSystem@localhost:25511/system/cluster/core/daemon#1845425976]] to [akka://ClusterSystem@localhost:64819]
+17:40:28.136 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64819] - Welcome from [akka://ClusterSystem@localhost:25511]
+17:40:28.157 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:25511, Up)
+17:40:28.161 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:64792, Up)
+17:40:28.336 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.ClusterGossip -- Cluster Node [akka://ClusterSystem@localhost:64792] - Ignoring received gossip from unknown [UniqueAddress(akka://ClusterSystem@localhost:64819,-2260477792873711184)]
+17:40:29.582 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:64819, Up)
+17:40:29.597 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is up: Member(akka://ClusterSystem@localhost:64819, Up)
+17:40:29.978 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+17:40:29.978 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- StartedRegisteringTimer
+17:40:29.979 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Stored board reference from receptionist
+17:40:30.055 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Peter got pinged
+17:40:30.056 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Peter responded to the ping
+17:40:30.063 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Peter got setup message
+17:40:30.063 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Peter switched to Phase: READY
+17:40:33.736 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Peter got pinged
+17:40:33.737 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Peter responded to the ping
+17:40:34.996 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Timer was stopped
+17:40:35.946 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Peter got pinged
+17:40:35.946 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Peter responded to the ping
+17:40:40.946 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Peter got pinged
+17:40:40.947 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Peter responded to the ping
+17:40:42.467 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:40:42.467 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:40:42.467 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil got pinged
+17:40:42.467 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Bot Gil responded to the ping
+17:40:42.894 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+17:40:42.970 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  ch.bfh.akka.botrace.bot.BotRoot -- Received listing from receptionist
+17:45:29.771 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.actor.CoordinatedShutdown -- Running CoordinatedShutdown with reason [JvmExitReason]
+17:45:29.779 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64819] - Marked address [akka://ClusterSystem@localhost:64819] as [Leaving]
+17:45:31.452 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64819] - Exiting completed
+17:45:31.454 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64819] - Shutting down...
+17:45:31.455 [ClusterSystem-akka.actor.default-dispatcher-4] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64819] - Successfully shut down
+17:45:31.456 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64792] - Exiting confirmed [akka://ClusterSystem@localhost:64819]
+17:45:31.461 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:25511, Removed) after Up
+17:45:31.461 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:64792, Removed) after Up
+17:45:31.461 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:64819, Removed) after Exiting
+17:45:31.473 [ClusterSystem-akka.actor.default-dispatcher-27] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Shutting down remote daemon.
+17:45:31.474 [ClusterSystem-akka.actor.default-dispatcher-27] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remote daemon shut down; proceeding with flushing remote transports.
+17:45:31.510 [ClusterSystem-akka.actor.default-dispatcher-27] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:45:31.510 [ClusterSystem-akka.actor.default-dispatcher-27] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:64792], message stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:45:31.510 [ClusterSystem-akka.actor.default-dispatcher-27] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:64792], control stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:45:31.510 [ClusterSystem-akka.actor.default-dispatcher-27] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], control stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:45:31.520 [ClusterSystem-akka.actor.default-dispatcher-27] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remoting shut down.
+17:45:32.505 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.remote.artery.Association -- Association to [akka://ClusterSystem@localhost:64819] having UID [-2260477792873711184] has been stopped. Harmless quarantine. All messages to this UID will be delivered to dead letters. Reason: ActorSystem terminated
+17:45:32.656 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:64819, Removed) after Exiting
+17:45:33.584 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.actor.CoordinatedShutdown -- Running CoordinatedShutdown with reason [JvmExitReason]
+17:45:33.591 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64792] - Marked address [akka://ClusterSystem@localhost:64792] as [Leaving]
+17:45:33.723 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64792] - Exiting completed
+17:45:33.725 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64792] - Shutting down...
+17:45:33.725 [ClusterSystem-akka.actor.default-dispatcher-5] INFO  akka.cluster.Cluster -- Cluster Node [akka://ClusterSystem@localhost:64792] - Successfully shut down
+17:45:33.728 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:25511, Removed) after Up
+17:45:33.728 [ClusterSystem-akka.actor.default-dispatcher-16] INFO  c.b.akka.botrace.bot.ClusterListener -- Member is removed: Member(akka://ClusterSystem@localhost:64792, Removed) after Exiting
+17:45:33.738 [ClusterSystem-akka.actor.default-dispatcher-31] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Shutting down remote daemon.
+17:45:33.739 [ClusterSystem-akka.actor.default-dispatcher-31] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remote daemon shut down; proceeding with flushing remote transports.
+17:45:34.766 [ClusterSystem-akka.actor.default-dispatcher-31] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], message stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:45:34.767 [ClusterSystem-akka.actor.default-dispatcher-31] WARN  akka.stream.Materializer -- [outbound connection to [akka://ClusterSystem@localhost:25511], control stream] Upstream failed, cause: StreamTcpException: The connection has been aborted
+17:45:34.773 [ClusterSystem-akka.actor.default-dispatcher-31] INFO  a.r.RemoteActorRefProvider$RemotingTerminator -- Remoting shut down.
