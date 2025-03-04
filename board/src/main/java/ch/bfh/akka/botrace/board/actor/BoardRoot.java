@@ -13,6 +13,9 @@ import akka.actor.typed.receptionist.Receptionist;
 import akka.actor.typed.receptionist.ServiceKey;
 import ch.bfh.akka.botrace.board.model.BoardModel;
 import ch.bfh.akka.botrace.board.model.game.figures.Figure;
+import ch.bfh.akka.botrace.board.model.game.items.Item;
+import ch.bfh.akka.botrace.board.model.game.items.Usable;
+import ch.bfh.akka.botrace.board.model.game.items.Wearable;
 import ch.bfh.akka.botrace.common.BoardService;
 import ch.bfh.akka.botrace.common.Message;
 import ch.bfh.akka.botrace.common.boardmessage.*;
@@ -110,21 +113,62 @@ public class BoardRoot extends AbstractOnMessageBehavior<Message> { // root acto
 	private Behavior<Message> onItemActionMessage(ItemActionMessage message) {
 		// TODO: LOG
 
-		// TODO: EVERYTHING
+		Figure figure = boardModel.getFigures().get(message.botRef());
+		Item item = figure.getItemsCarrying().get(message.itemIndex());
+
+		// drop item
+		if(message.action() == 1){
+			item.drop();
+		}
+
+		// wear / unwear
+		if(item instanceof Wearable){
+			switch (message.action()){
+				case 2: ((Wearable) item).wear(); break;
+				case 3: ((Wearable) item).unwear(); break;
+			}
+		}
+
+		// use
+		if(item instanceof Usable){
+			if(message.action() == 2){
+				((Usable) item).use();
+			}
+		}
 		return this;
 	}
 
 	private Behavior<Message> onAttackMessage(AttackMessage message) {
-		double attack = boardModel.getFigures().get(message.botRef()).attack();
+		// get attack value of attacker
 
-		for(Figure figure :boardModel.getFigures().values()) {
-			if(figure.getName().equals(message.opponentRef())){
-				figure.defend(attack);
+
+		Figure defender = null;
+		ActorRef<Message> defenderRef = null;
+		// find figure to attack
+		for(ActorRef<Message> actorRef: boardModel.getBotRefs()){
+			if(boardModel.getFigures().get(actorRef).getName().equals(message.opponentRef())){
+				defenderRef = actorRef;
+				defender = boardModel.getFigures().get(actorRef);
 			}
-
-
 		}
-		// send out new attackMessage (in order)
+
+		double[] values = boardModel.attack(defender, message.botRef());
+
+		// TODO: LOGGING of attack (values in array)
+
+
+		// check if player still alive:
+		if(defender.getHealthPoints() <= 0){
+			defenderRef.tell(new DeathMessage(defenderRef));
+			boardModel.getPlayersAlive().remove(defender);
+
+			// if attacker = last survivor -> winner
+			if(boardModel.getPlayersAlive().size() == 1){
+				message.botRef().tell(new WinMessage(message.botRef()));
+			}
+		}
+
+		// send out new attackMessage to next actor
 		ActorRef<Message> actorRef = boardModel.getNextTurnFigure();
 		String figureOverview = boardModel.getFigures().get(actorRef).getFigureOverview();
 		List<String> nameListe = getOpponentsList(actorRef);
@@ -135,6 +179,8 @@ public class BoardRoot extends AbstractOnMessageBehavior<Message> { // root acto
 
 	private Behavior<Message> onFigureOverviewRequestMessage(FigureOverviewRequestMessage message) {
 		// TODO: LOG
+		getContext().getLog().info("Figure overview request: {}", boardModel.getFigures().get(message.botRef()).getName());
+
 		// get figureOverview from boarModel
 		String figureOverview = boardModel.getFigures().get(message.botRef()).getFigureOverview();
 
@@ -145,6 +191,7 @@ public class BoardRoot extends AbstractOnMessageBehavior<Message> { // root acto
 	}
 
 	private List<String> getOpponentsList(ActorRef<Message> actorRef){
+
 		List<String> nameListe = boardModel.getFigures().values().stream()
 				.map(Figure::getName)
 				.collect(Collectors.toList());
@@ -155,6 +202,8 @@ public class BoardRoot extends AbstractOnMessageBehavior<Message> { // root acto
 
 	private Behavior<Message> onInventoryRequestMessage(InventoryRequestMessage message) {
 		// TODO: LOG
+		getContext().getLog().info("Inventory request: {}", boardModel.getFigures().get(message.botRef()).getName());
+
 		// get inventory
 		String inventory = boardModel.getFigures().get(message.botRef()).getInventoryOverview();
 		int itemsCount = boardModel.getFigures().get(message.botRef()).getItemsCarrying().size();
@@ -163,10 +212,11 @@ public class BoardRoot extends AbstractOnMessageBehavior<Message> { // root acto
 	}
 
 	private Behavior<Message> onItemRequestMessage(ItemRequestMessage message) {
-		// TODO: LOG
+		getContext().getLog().info("Item request: {}", message.itemIndex());
+
 		String itemOverview = boardModel.getFigures().get(message.botRef()).getItemsCarrying().get(message.itemIndex()).itemOverview();
 		boolean wearable = boardModel.getFigures().get(message.botRef()).getItemsCarrying().get(message.itemIndex()).isWearable();
-		message.botRef().tell(new ItemResponseMessage(itemOverview, wearable, message.botRef()));
+		message.botRef().tell(new ItemResponseMessage(itemOverview, wearable, message.itemIndex(), message.botRef()));
 		return this;
 	}
 
@@ -189,7 +239,7 @@ public class BoardRoot extends AbstractOnMessageBehavior<Message> { // root acto
 		getContext().getLog().info("Registering: {}", message.name());
 
 		// adding to boardModel
-		boardModel.registerNewBot(message.name(), "Elf", message.botRef());
+		boardModel.registerNewBot(message.name(), message.type(), message.botRef());
 
 		// ping the bot
 		message.botRef().tell(new PingMessage());
@@ -201,7 +251,7 @@ public class BoardRoot extends AbstractOnMessageBehavior<Message> { // root acto
 			System.out.println("\n\n\n\nNew fighter connected:" +
 					"\n0 - start game" +
 					"\n1 - wait for another enemy" +
-					"\n\n current amount of fighter: " + boardModel.getBotRefs().size());
+					"\n\ncurrent amount of fighter: " + boardModel.getBotRefs().size());
 			int input = scanner.nextInt();
 			if(input == 0){
 				System.out.println("\n\nFight has started");
@@ -272,7 +322,7 @@ public class BoardRoot extends AbstractOnMessageBehavior<Message> { // root acto
 	private Behavior<Message> onTimeout(TimeoutMessage timeoutMessage) {
 		getContext().getLog().info("Timeout reached for " + timeoutMessage.botRef().path().name());
 		getContext().getLog().info("Deregistering bot " + timeoutMessage.botRef().path().name());
-		boardModel.deregister(timeoutMessage.botRef());
+		//boardModel.deregister(timeoutMessage.botRef());
 		return this;
 	}
 }

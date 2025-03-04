@@ -4,9 +4,9 @@ import lombok.Getter;
 
 @Getter
 public abstract class MeleeWeapon extends Weapon{
-    private final int defenceValue;
+    private final double defenceValue;
 
-    public MeleeWeapon(String name, int weight, int attackValue, int defenceValue) {
+    public MeleeWeapon(String name, int weight, double attackValue, double defenceValue) {
         super(name, weight, attackValue);
         this.defenceValue = defenceValue;
     }

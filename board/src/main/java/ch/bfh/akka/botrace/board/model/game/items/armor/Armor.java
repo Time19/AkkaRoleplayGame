@@ -1,12 +1,15 @@
 package ch.bfh.akka.botrace.board.model.game.items.armor;
 
 
+import ch.bfh.akka.botrace.board.model.game.figures.Dwarf;
+import ch.bfh.akka.botrace.board.model.game.figures.Elf;
+import ch.bfh.akka.botrace.board.model.game.figures.Troll;
 import ch.bfh.akka.botrace.board.model.game.items.Item;
 import ch.bfh.akka.botrace.board.model.game.items.Wearable;
 import lombok.Getter;
 
 @Getter
-public abstract class Armor extends Item implements Wearable {
+public class Armor extends Item implements Wearable {
 
     private final ArmorType armorType;
     private final double armorStrength;     // percentage damage reduction in decimal (0.1 = 10%)
@@ -31,18 +34,28 @@ public abstract class Armor extends Item implements Wearable {
 
     @Override
     public boolean wear() {
-        this.getOwner().setActiveArmor(this);
-        return true;
 
-        // TODO: Change initiative value
-        // TODO: Check if not troll (cnat wear heavy armor)
-        // TODO: Check if not Dwarf (cant wear heavy armor)
+        if(this.armorType == ArmorType.HEAVY && (this.getOwner() instanceof Elf || this.getOwner() instanceof Dwarf)){
+            System.out.println("cant wear heavy armor");
+            return false;
+        }
+
+        if(this.getOwner() instanceof Troll){
+            System.out.println("Trolls cant wear armor");
+            return false;
+        }
+
+        this.getOwner().setActiveArmor(this);
+        // reduce initiativeValueReduction from owner
+        this.getOwner().setInitiativeValue(this.getOwner().getInitiativeValue() - this.initiativeValueReduction);
+
+        return true;
     }
 
     @Override
     public void unwear() {
         this.getOwner().setActiveArmor(null);
-        // TODO: Change initiative value
+        this.getOwner().setInitiativeValue(this.getOwner().getInitiativeValue() + this.initiativeValueReduction);
     }
 
     public String getItemOverview(){

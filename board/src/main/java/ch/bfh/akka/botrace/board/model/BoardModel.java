@@ -10,8 +10,10 @@ import ch.bfh.akka.botrace.board.actor.Board;
 import ch.bfh.akka.botrace.board.model.game.figures.*;
 // items
 
+import ch.bfh.akka.botrace.board.model.game.items.ItemShop;
 import ch.bfh.akka.botrace.common.Message;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.util.*;
 
@@ -24,12 +26,14 @@ public class BoardModel implements Board {
     @Getter
     private Map<ActorRef<Message>, Figure> figures = new HashMap<>();
     private List<ActorRef<Message>> botRefs = new ArrayList<>();
+    @Getter
+    @Setter
     private List<ActorRef<Message>> playersAlive = new ArrayList<>();
     @Getter
     private List<String> figureNames = new ArrayList<>();
     private List<BoardUpdateListener> listeners = new ArrayList<>(); // define listeners
-    private int nextTurn = 0;
-    private int maxPlayers = 0;
+    private int nextTurn = 1;
+    private final ItemShop itemShop = new ItemShop();
 
     public void addBoardUpdateListener(BoardUpdateListener listener) {
         listeners.add(listener);
@@ -44,20 +48,54 @@ public class BoardModel implements Board {
     public BoardModel() {}
 
     @Override
-    public void registerNewBot(String name, String figureType, ActorRef<Message> botRef) {
-        // TODO: Create new figure object
-        Elf elf = new Elf(figureType, 10, 10, 10);
-        figures.put(botRef, elf);
+    public void registerNewBot(String name, int figureType, ActorRef<Message> botRef) {
+
+        Figure figure = null;
+
+        switch (figureType){
+            case 0: figure = new Human(name, 10, 5); break;
+            case 1: figure = new Elf(name, 10, 10, 1);
+            case 2: figure = new Dwarf(name, 10, 10);
+            case 3: figure = new Goblin(name, 10, 10);
+            case 4: figure = new Ork(name, 10, 10);
+            case 5: figure = new Troll(name, 10, 10);
+        }
+
+        figures.put(botRef, figure);
         figureNames.add(name);
         botRefs.add(botRef);
         playersAlive.add(botRef);
-        maxPlayers = maxPlayers + 1;
     }
 
     public ActorRef<Message> getNextTurnFigure(){
-        int result = nextTurn % maxPlayers + 1;
+        if (playersAlive.isEmpty()){
+            return null;
+        }
+
+        int result = nextTurn % playersAlive.size();
         nextTurn++;
+        System.out.println(result);
         return playersAlive.get(result);
+    }
+
+    public double[] attack(Figure opponentRef, ActorRef<Message> attackRef) {
+        double[] result = new double[1];
+
+        Figure attacker = figures.get(attackRef);
+        Figure defender = opponentRef;
+
+        double attackDamage = attacker.attack();
+        defender.defend(attackDamage);
+
+        // check if attacker gets item
+        if(attacker.getTotalAttacks() % 2 == 0){
+            this.itemShop.createRandomItem(attacker);
+            System.out.println("new item created");
+        }
+
+
+
+        return result;
     }
 
     @Override

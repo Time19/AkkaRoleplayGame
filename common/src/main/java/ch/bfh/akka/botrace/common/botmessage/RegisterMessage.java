@@ -15,7 +15,7 @@ import java.util.Objects;
  * @param botRef the reference to the bot sending this message.
  */
 public record RegisterMessage(
-    String name, String type,
+    String name, int type,
     ActorRef<Message> botRef) implements Message {
     public RegisterMessage {
         Objects.requireNonNull(name, "name cannot be null");

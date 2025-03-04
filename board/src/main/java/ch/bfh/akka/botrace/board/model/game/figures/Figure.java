@@ -53,6 +53,8 @@ public abstract class Figure implements Attacks, Defends{
     @Getter
     @Setter
     private Armor activeArmor = null;
+    @Getter
+    private int totalAttacks = 0;
 
     @Getter
     // inventory of figure with all the items in it
@@ -101,7 +103,7 @@ public abstract class Figure implements Attacks, Defends{
         }
 
         double randomMultiplier = random.nextDouble(0.9, 1.1);
-
+        totalAttacks++;
         return (Math.floor(attackStrength * randomMultiplier * 100) / 100);
     }
 
@@ -130,7 +132,6 @@ public abstract class Figure implements Attacks, Defends{
                 value -= 1;
             }
         }
-
         return value;
     }
 

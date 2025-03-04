@@ -58,7 +58,7 @@ public class BotRoot extends AbstractOnMessageBehavior<Message> { // guardian ac
      *
      * @return a behavior.
      */
-    public static Behavior<Message> create(String botName, String figureType) {
+    public static Behavior<Message> create(String botName, int figureType) {
         return Behaviors.setup(ctx -> Behaviors.withTimers(timers -> new BotRoot(ctx, timers, botName, figureType)));
     }
 
@@ -68,7 +68,7 @@ public class BotRoot extends AbstractOnMessageBehavior<Message> { // guardian ac
     private Phase currentPhase;
     private int moveCount;
     ArrayList<Integer> recentDistances;
-    private String figureType;
+    private int figureType;
 
 
     /**
@@ -77,7 +77,7 @@ public class BotRoot extends AbstractOnMessageBehavior<Message> { // guardian ac
      *
      * @param context the context of this actor system
      */
-    private BotRoot(ActorContext<Message> context, TimerScheduler<Message> timers, String botName, String figureType) {
+    private BotRoot(ActorContext<Message> context, TimerScheduler<Message> timers, String botName, int figureType) {
         super(context);
         this.timers = timers;
         this.recentDistances = new ArrayList<>();
@@ -164,9 +164,9 @@ public class BotRoot extends AbstractOnMessageBehavior<Message> { // guardian ac
 
     private void printList(List<String> list){
         for(int i = 0; i < list.size(); i++){
-            System.out.println("\n\n\n\n\n");
             System.out.println(i + " - " + list.get(i));
         }
+        System.out.println("\nTotal: " + list.size());
     }
 
     private Behavior<Message> onInventoryResponseMessage(InventoryResponseMessage message){
@@ -204,7 +204,7 @@ public class BotRoot extends AbstractOnMessageBehavior<Message> { // guardian ac
             // 2 - equip (wearable)
             // 3 - unequip (wearable)
             if(input <= 2 || (input == 3 && message.wearable())){
-                boardRef.tell(new ItemRequestMessage(input, this.botRef));
+                boardRef.tell(new ItemActionMessage(input, message.itemIndex(), this.botRef));
                 break;
             }
         }

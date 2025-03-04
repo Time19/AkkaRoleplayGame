@@ -18,6 +18,7 @@ ch\bfh\akka\botrace\board\actor\ClusterListener.class
 ch\bfh\akka\botrace\board\model\game\items\ring\PowerRing.class
 ch\bfh\akka\botrace\board\actor\ClusterListener$Event.class
 ch\bfh\akka\botrace\board\model\package-info.class
+ch\bfh\akka\botrace\board\model\game\items\ItemShop.class
 ch\bfh\akka\botrace\board\model\game\figures\Goblin.class
 ch\bfh\akka\botrace\board\model\game\items\weapon\Weapon.class
 ch\bfh\akka\botrace\board\model\game\items\weapon\Club.class

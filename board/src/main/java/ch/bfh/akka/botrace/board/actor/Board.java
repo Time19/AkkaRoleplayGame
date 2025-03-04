@@ -14,6 +14,6 @@ import java.util.List;
  */
 public interface Board {
 
-    void registerNewBot(String name, String figureType, ActorRef<Message> botRef);
+    void registerNewBot(String name, int figureType, ActorRef<Message> botRef);
     boolean isAlive(ActorRef<Message> botRef);
 }

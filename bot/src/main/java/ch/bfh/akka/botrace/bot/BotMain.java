@@ -39,33 +39,8 @@ public class BotMain {
                 break;
             }
         }
-        String figure = null;
 
-        switch (number) {
-            case 0:
-                figure = "Human";
-                break;
-            case 1:
-                figure = "Elf";
-                break;
-            case 2:
-                figure = "Dwarf";
-                break;
-            case 3:
-                figure = "Goblin";
-                break;
-            case 4:
-                figure = "Ork";
-                break;
-            case 5:
-                figure = "Troll";
-                break;
-            default:
-                figure = "Human";
-                break;
-        }
-
-        ActorSystem<Void> bot = ActorSystem.create(rootBehavior(name,figure), "ClusterSystem");
+        ActorSystem<Void> bot = ActorSystem.create(rootBehavior(name,number), "ClusterSystem");
         bot.log().info("Player Actor System created");
     }
 
@@ -74,7 +49,7 @@ public class BotMain {
      *
      * @return a void behavior
      */
-    private static Behavior<Void> rootBehavior(String name, String figureType) {
+    private static Behavior<Void> rootBehavior(String name, int figureType) {
         return Behaviors.setup(context -> {
 
             // Create an actor that handles cluster domain events

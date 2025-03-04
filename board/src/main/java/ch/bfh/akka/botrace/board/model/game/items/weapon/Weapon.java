@@ -7,9 +7,9 @@ import lombok.Getter;
 
 @Getter
 public abstract class Weapon extends Item implements Wearable {
-    private final int attackValue;
+    private final double attackValue;
 
-    public Weapon(String name, int weight, int attackValue) {
+    public Weapon(String name, int weight, double attackValue) {
         super(name, weight);
         this.attackValue = attackValue;
         this.setWearable(true);
@@ -18,7 +18,6 @@ public abstract class Weapon extends Item implements Wearable {
     public boolean wear(){
         getOwner().setActiveWeapon(this);
         return true;
-        // TODO: Check if wearing heavy armor if u want to equip bow
     }
 
     public void unwear(){
